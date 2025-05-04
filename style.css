@@ -36,6 +36,16 @@ a {
     padding: 22px 13px 0;
 }
 
+@media (min-width: 768px) {
+    .menu-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 
 /* way to show 1 */
 .menu-category {
@@ -45,6 +55,13 @@ a {
     background: white;
     border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 768px) {
+    .menu-category {
+        flex: 1;
+        width: 100%;
+    }
 }
 
 .item {
