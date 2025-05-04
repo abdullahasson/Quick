@@ -26,11 +26,11 @@ body {
     display: flex;
     flex-direction: column;
     padding: 22px 13px;
-    gap: 13px;
 }
 
 .menu-category {
     padding: 20px;
+    margin-bottom: 15px;
     cursor: pointer;
     background: white;
     border-radius: 15px;
@@ -63,3 +63,21 @@ body {
         height: 80px;
     }
 }
+
+#install-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #6F4E37;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1000;
+  }
+  
+  #install-button:hover {
+    background: #8b7355;
+  }
