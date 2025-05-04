@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Service Worker -->
+    <!-- رابط ملف Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- أيقونة الموقع (للأجهزة التي لا تدعم Manifest) -->
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+
+    <!-- التنسيق اللازم لـ iOS -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#6F4E37">
+    <meta name="theme-color" content="#6F4E37">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- خط عربي -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <title>قائمة كافتريا كويك</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>كويك ☕</h1>
+        <p>اختر ما يشتهيه قلبك!</p>
+    </div>
+
+    <div class="menu-container">
+        <div class="menu-category">
+            <h2>☕ المشروبات الساخنة</h2>
+        </div>
+
+        <div class="menu-category">
+            <h2>☕ المشروبات الباردة</h2>
+        </div>
+
+        <div class="menu-category">
+            <h2>☕ المشروبات الباردة</h2>
+        </div>
+
+        <div class="menu-category">
+            <h2>🍰 الحلويات</h2>
+        </div>
+
+        <div class="menu-category">
+            <h2>فراب</h2>
+        </div>
+
+        <div class="menu-category">
+            <h2>كوكتيلات</h2>
+        </div>
+
+        <div class="menu-category">
+            <h2>ايس</h2>
+        </div>
+    </div>
+
+
+    <script>
+        // تسجيل Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(() => console.log('Service Worker مُسجل بنجاح!'))
+                .catch((err) => console.log('فشل التسجيل:', err));
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- 
+    <div class="menu-category">
+        <h2>🍰 الحلويات</h2>
+        <div class="item">
+            <div>
+                <h3>تشيز كيك</h3>
+                <p>مع طبقة التوت الطازج</p>
+            </div>
+            <img src="./assets/banana.jpg" alt="تشيز كيك">
+            <span class="price">25 ر.س</span>
+        </div>
+    </div>
+
+-->
